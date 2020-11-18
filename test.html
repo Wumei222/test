@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title></title>
+    <script src="../../../script/jquery-3.1.1.min.js"></script>
+    <script>
+ 
+ 
+        function changeFrameHeight() {
+            var ifm1 = document.getElementById("myiframe1");
+            ifm1.height = document.documentElement.clientHeight;
+            ifm1.width = document.documentElement.clientWidth;
+        }
+ 
+        window.onresize = function () {
+            changeFrameHeight();
+ 
+        }
+ 
+    </script>
+    <style>
+ 
+        body{margin:0; padding:0;}
+ 
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <iframe src="https://www.baidu.com/" id="myiframe1" name="myiframe" scrolling="yes" onload="changeFrameHeight()" frameborder="0"></iframe>
+    </form>
+</body>
+</html>
